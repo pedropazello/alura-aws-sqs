@@ -1,0 +1,13 @@
+aws sqs list-queues
+
+aws sqs send-message --queue-url https://sqs.us-east-1.amazonaws.com/338746472000/alura-test --message-body "Ola, mundo"
+
+aws sqs receive-message --queue-url https://sqs.us-east-1.amazonaws.com/338746472000/alura-test
+
+aws sqs create-queue --queue-name alura-test
+
+aws sqs delete-queue --queue-url https://sqs.us-east-1.amazonaws.com/338746472000/alura-test
+
+aws sqs delete-message --receipt-handle AQEBvp0EkBoVgdt3kXbDuyUUkpFj0+0QGmHoGHOsTy2O6lpKWWnyYMMf55ohMJtomI+wwdFoSbpYAOJ0ddeQk3SfxKdPSJ85ialyYS+sej1atouIvO2RmtNBpKLB0x0uY3lzQGyAATlH0HVENUK+YBiDF0m9u0W/4zeIUgAZ+/pcndjxFIha3oknFRBk68Q082KR2Us/sWMGzyG7GmEV7ye028A56Jk3x3MfwyVXyco6oc5s7Vo5+Ak6+Clit7XtYJzQrkllsVpPRWxWOmAwbyN2ON6IfFrLNxMBgRaQwQgLCU5EUw8A7frCtVFPn7tPzIPw+t1AvyAEYlhp61pul9RxsEs0fF1pM+j/HEVfaXeUmCktO6xIKPI3j+nRSSisiGxBraDvG+PCA0+NOJm6jOHg8g== --queue-url https://sqs.us-east-1.amazonaws.com/338746472000/alura-test
+
+aws sqs receive-message --queue-url https://sqs.us-east-1.amazonaws.com/338746472000/alura-test --wait-time-seconds 20
